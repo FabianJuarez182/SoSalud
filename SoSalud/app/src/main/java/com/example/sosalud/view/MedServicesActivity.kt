@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.example.sosalud.R
 
 class MedServicesActivity {
-    override fun onCreateView(
+    fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
