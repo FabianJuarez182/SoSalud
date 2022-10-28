@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sosalud.databinding.FragmentLoginBinding
 
-class LoginActivity : Fragment() {
+class InitialFragment : Fragment(){
     private var _binding: FragmentLoginBinding? = null
 
     // This property is only valid between onCreateView and
@@ -35,4 +35,3 @@ class LoginActivity : Fragment() {
         _binding = null
     }
 }
-

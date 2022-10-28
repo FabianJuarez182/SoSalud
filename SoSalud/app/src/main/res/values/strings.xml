@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SoSalud</string>
     <string name="login_label">Bienvenido</string>
+    <string name ="sign_up_tittle">Holaaaa</string>
 </resources>
