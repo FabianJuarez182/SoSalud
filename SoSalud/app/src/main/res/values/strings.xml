@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SoSalud</string>
+    <string name="login_label">Bienvenido</string>
+    <string name="nombre">Nombre Completo</string>
+    <string name="password">Contraseña</string>
+    <string name ="correo_electronico">Correo electronico</string>
+    <string name="crear_usuario">Crear Usuario</string>
+    <string name ="iniciar_sesion">Iniciar Sesion</string>
 </resources>

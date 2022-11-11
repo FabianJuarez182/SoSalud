@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/InitialFragment">
+
+    <fragment
+        android:id="@+id/InitialFragment"
+        android:name="com.example.sosalud.view.InitialFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/initial_activity">
+        <action
+            android:id="@+id/action_InitialFragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+        <action
+            android:id="@+id/action_InitialFragment_to_activity_register"
+            app:destination="@id/activity_register" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.sosalud.view.LoginActivity"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_login">
+    </fragment>
+    <fragment
+        android:id="@+id/activity_register"
+        android:name="com.example.sosalud.view.RegisterFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/activity_register2">
+        <action
+            android:id="@+id/action_activity_register_to_InitialFragment2"
+            app:destination="@id/InitialFragment" />
+    </fragment>
+</navigation>

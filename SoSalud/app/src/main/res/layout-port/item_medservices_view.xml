@@ -29,7 +29,6 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="100dp"
             card_view:layout_constraintStart_toEndOf="@+id/medservicePhoto"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="Toma de presión arterial" />
