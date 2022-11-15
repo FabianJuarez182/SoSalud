@@ -32,4 +32,12 @@
             android:id="@+id/action_activity_register_to_InitialFragment2"
             app:destination="@id/InitialFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/fragment_medservices"
+        android:name="com.example.sosalud.view.MedServicesActivity"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_medservices">
+    </fragment>
+
 </navigation>

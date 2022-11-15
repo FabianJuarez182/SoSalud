@@ -6,4 +6,16 @@
     <string name ="correo_electronico">Correo electronico</string>
     <string name="crear_usuario">Crear Usuario</string>
     <string name ="iniciar_sesion">Iniciar Sesion</string>
+
+    <!--Services name an prices -->
+    <string name="Service1">Toma de presion                  Q20.00</string>
+    <string name="Service2">Toma de azucar                   Q20.00</string>
+    <string name="Service3">Inyeccion intramuscular          Q25.00</string>
+    <string name="Service4">Cequeo cardiaco                  Q50.00</string>
+    <string name="Service5">Chequeo general                  Q70.00</string>
+    <string name="Service6">Chequeo de vision                Q70.00</string>
+    <string name="Service7">Pruebas de COVID PCR            Q150.00</string>
+    <string name="Service8">Muestras para laboratorio       Q100.00</string>
+    <string name="Service9">Odontologia                     Q100.00</string>
+    <string name="Service10">Rayos X                         Q500.00</string>
 </resources>
