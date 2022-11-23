@@ -9,12 +9,18 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.sosalud.R
 import com.example.sosalud.databinding.ActivityRegister2Binding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class RegisterFragment: Fragment() {
     private var _binding: ActivityRegister2Binding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
+    val firebase = Firebase.auth
+    val realTimeData = Firebase.database.reference
+
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -35,6 +41,21 @@ class RegisterFragment: Fragment() {
         val register = root.findViewById<Button>(R.id.button4)
         register.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_activity_register_to_fragment_medservices)
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.button4.setOnClickListener{
+            val email = binding.editTextTextEmailAddress2.text.toString()
+            val password = binding.editTextTextPassword2.text.toString()
+            val username = binding.editTextTextPersonName.text.toString()
+            if(email.isNotBlank() && password.isNotBlank() && username.isNotBlank()){
+                firebase.createUserWithEmailPassword(email, password).addOnCompleteListener{
+                    val action = SignUpFragmentDirections.actionSignUpFragment
+                    val user = Firebase.auth.currentUser
+                }
+            }
         }
     }
 
