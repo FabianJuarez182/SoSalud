@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436880937198",
+    "project_id": "fir-sosalud",
+    "storage_bucket": "fir-sosalud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436880937198:android:c6a2b3b2f2a6877bce63ff",
+        "android_client_info": {
+          "package_name": "com.example.sosalud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436880937198-bfrmt7l4qt8m9s84g53mvr3fc8ubgg49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS4TG9Sjs1wvJfwWny3C5Og3EKdwdrQPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436880937198-bfrmt7l4qt8m9s84g53mvr3fc8ubgg49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
