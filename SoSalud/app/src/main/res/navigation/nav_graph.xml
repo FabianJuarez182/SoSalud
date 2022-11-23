@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/InitialFragment">
+    app:startDestination="@id/fragment_medservices">
 
     <fragment
         android:id="@+id/InitialFragment"
@@ -22,6 +22,9 @@
         android:name="com.example.sosalud.view.LoginActivity"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_fragment_to_fragment_medservices"
+            app:destination="@id/fragment_medservices" />
     </fragment>
     <fragment
         android:id="@+id/activity_register"
@@ -32,4 +35,12 @@
             android:id="@+id/action_activity_register_to_InitialFragment2"
             app:destination="@id/InitialFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/fragment_medservices"
+        android:name="com.example.sosalud.view.MedServicesActivity"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_medservices">
+    </fragment>
+
 </navigation>
