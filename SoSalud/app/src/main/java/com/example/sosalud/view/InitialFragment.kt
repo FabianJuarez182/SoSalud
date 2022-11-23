@@ -7,23 +7,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.sosalud.R
 import com.example.sosalud.databinding.InitialActivityBinding
 
 class InitialFragment : Fragment(){
-    val button = view?.findViewById<Button>(R.id.button)
-
     private var _binding: InitialActivityBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    private lateinit var recyclerView: RecyclerView
-    // Keeps track of which LayoutManager is in use for the [RecyclerView]
-    private var isLinearLayoutManager = true
 
     override fun onCreateView(
         inflater: LayoutInflater,
