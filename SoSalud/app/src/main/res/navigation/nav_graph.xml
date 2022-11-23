@@ -55,4 +55,10 @@
         tools:layout="@layout/fragment_medservices">
     </fragment>
 
+    <fragment
+        android:id="@+id/fragment_homecare"
+        android:name="com.example.sosalud.view.HomecareActivity"
+        android:label="DetailHomecare"
+        tools:layout="@layout/fragment_homecare">
+    </fragment>
 </navigation>
