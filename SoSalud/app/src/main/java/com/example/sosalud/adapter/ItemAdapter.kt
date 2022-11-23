@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sosalud.R
 import com.example.sosalud.model.Services
+import com.example.sosalud.view.MedServicesActivity
 
-class ItemAdapter (
-    private val context: Context,
+class ItemAdapter(
+    private val context: MedServicesActivity,
     private val dataset: List<Services>
 ): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
