@@ -9,11 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.sosalud.R
 import com.example.sosalud.databinding.FragmentLoginBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.userProfileChangeRequest
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity : Fragment() {
     private var _binding: FragmentLoginBinding? = null
 
     private val binding get() = _binding!!
+    val firebase = Firebase.auth
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,7 +45,11 @@ class LoginActivity : Fragment() {
         binding.button3.setOnClickListener{
             val email = binding.editTextTextEmailAddress.text.toString()
             val password = binding.editTextTextPassword.text.toString()
-            
+            if(email.isNotBlank() && password.isNotBlank()){
+                firebase.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
+                    view.findNavController().navigate(R.id.action_login_fragment_to_fragment_medservices)
+                }
+            }
         }
     }
 

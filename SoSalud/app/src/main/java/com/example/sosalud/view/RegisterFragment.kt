@@ -1,23 +1,30 @@
 package com.example.sosalud.view
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.sosalud.R
 import com.example.sosalud.databinding.ActivityRegister2Binding
+import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
+import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class RegisterFragment: Fragment() {
     private var _binding: ActivityRegister2Binding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    
     val firebase = Firebase.auth
     val realTimeData = Firebase.database.reference
 
@@ -50,10 +57,27 @@ class RegisterFragment: Fragment() {
             val email = binding.editTextTextEmailAddress2.text.toString()
             val password = binding.editTextTextPassword2.text.toString()
             val username = binding.editTextTextPersonName.text.toString()
+
             if(email.isNotBlank() && password.isNotBlank() && username.isNotBlank()){
-                firebase.createUserWithEmailPassword(email, password).addOnCompleteListener{
-                    val action = SignUpFragmentDirections.actionSignUpFragment
-                    val user = Firebase.auth.currentUser
+              firebase.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
+                  if (task.isSuccessful){
+                      Log.d("successful", firebase.currentUser.toString())
+                      view.findNavController().navigate(R.id.action_activity_register_to_fragment_medservices)
+                      val user = Firebase.auth.currentUser
+                      val profileUpdates = userProfileChangeRequest {
+                          displayName = username
+                      }
+
+                  }
+                  else{
+                      Log.w("error", "error", task.exception)
+
+                      Toast.makeText(
+                          requireActivity(),
+                          "There was an error signing in" + task.exception?.message,
+                          Toast.LENGTH_LONG
+                      ).show()
+                  }
                 }
             }
         }
