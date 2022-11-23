@@ -18,4 +18,9 @@
     <string name="Service8">Muestras para laboratorio       Q100.00</string>
     <string name="Service9">Odontologia                     Q100.00</string>
     <string name="Service10">Rayos X                         Q500.00</string>
+
+    <!--Persons information -->
+    <string name="Person1">Fernanda</string>
+    <string name="Hour1">10:30 a.m.</string>
+    <string name="Addres1">19 calle 20-31 Zona 10 de Mixco</string>
 </resources>
