@@ -4,20 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.findNavController
+import com.example.sosalud.R
 import com.example.sosalud.databinding.FragmentLoginBinding
 
 class LoginActivity : Fragment() {
     private var _binding: FragmentLoginBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
-    private lateinit var recyclerView: RecyclerView
-    // Keeps track of which LayoutManager is in use for the [RecyclerView]
-    private var isLinearLayoutManager = true
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +24,16 @@ class LoginActivity : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
+        val root = inflater.inflate(R.layout.fragment_login, container, false)
+        setupNavigation(root)
+        return root
+    }
+
+    private fun setupNavigation(root: View) {
+        val loginButton2 = root.findViewById<Button>(R.id.button3)
+        loginButton2.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_login_fragment_to_fragment_medservices)
+        }
     }
 
     override fun onDestroyView() {
