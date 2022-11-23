@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -41,9 +42,9 @@ class MedServicesActivity: Fragment() {
     }
 
     private fun setupNavigation(root: View) {
-        val loginButton = root.findViewById<Button>(R.id.button5)
-        loginButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_InitialFragment_to_login_fragment)
+        val ImageClickable = root.findViewById<Button>(R.id.item_image)
+        ImageClickable.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_fragment_medservices_to_fragment_homecare)
         }
     }
 }
