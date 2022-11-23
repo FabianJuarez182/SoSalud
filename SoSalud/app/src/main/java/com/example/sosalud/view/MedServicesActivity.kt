@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sosalud.R
@@ -14,11 +16,6 @@ import com.example.sosalud.databinding.FragmentMedservicesBinding
 
 class MedServicesActivity: Fragment() {
     private var _binding: FragmentMedservicesBinding? = null
-
-    private val binding get() = _binding!!
-
-    private lateinit var recyclerView: RecyclerView
-    private var isLinearLayoutManager = true
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,5 +38,12 @@ class MedServicesActivity: Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setupNavigation(root: View) {
+        val loginButton = root.findViewById<Button>(R.id.button5)
+        loginButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_InitialFragment_to_login_fragment)
+        }
     }
 }
