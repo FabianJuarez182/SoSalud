@@ -17,11 +17,6 @@ import com.example.sosalud.databinding.FragmentHomecareBinding
 class HomecareActivity: Fragment() {
     private var _binding: FragmentHomecareBinding? = null
 
-    private val binding get() = _binding!!
-
-    private lateinit var recyclerView: RecyclerView
-    private var isLinearLayoutManager = true
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
