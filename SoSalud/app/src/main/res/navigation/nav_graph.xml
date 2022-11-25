@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_login_fragment_to_fragment_medservices"
             app:destination="@id/fragment_medservices" />
+        <action
+            android:id="@+id/action_login_fragment_to_fragment_homecare"
+            app:destination="@id/fragment_homecare" />
     </fragment>
 
     <!--Register -->

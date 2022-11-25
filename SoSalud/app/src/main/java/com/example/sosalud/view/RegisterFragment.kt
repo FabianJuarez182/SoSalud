@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Toast
+import androidx.databinding.adapters.NumberPickerBindingAdapter.setValue
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.sosalud.R
@@ -35,7 +36,10 @@ class RegisterFragment: Fragment() {
     }
     fun writeNewUser(name: String, email: String, personalSalud: Boolean ) {
         val user = User(name, email,personalSalud)
-        realTimeData.child("users").child("global").push().setValue(user)
+        val globalReference = realTimeData.child("users").child("global")
+        globalReference.child(email.split(".")[0]).child("email").setValue(email)
+        globalReference.child(email.split(".")[0]).child("personalSalud").setValue(personalSalud)
+        globalReference.child(email.split(".")[0]).child("username").setValue(name)
     }
     override fun onCreateView(
         inflater: LayoutInflater,
