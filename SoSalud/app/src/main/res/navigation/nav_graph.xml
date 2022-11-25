@@ -60,6 +60,18 @@
             android:id="@+id/action_fragment_medservices_to_fragment_homecare"
             app:destination="@id/fragment_homecare" />
     </fragment>
+    <fragment
+        android:id="@+id/menu_fragment"
+        android:name="com.example.sosalud.view.MenuAct"
+        android:label="@string/app_name"
+        tools:layout="@layout/menu_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/summary_fragment"
+        android:name="com.example.sosalud.view.SummaryAct"
+        android:label="@string/app_name"
+        tools:layout="@layout/summary_fragment">
+    </fragment>
 
     <fragment
         android:id="@+id/fragment_homecare"
