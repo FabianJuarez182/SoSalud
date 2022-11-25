@@ -1,5 +1,6 @@
 package com.example.sosalud.adap
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sosalud.R
+import com.example.sosalud.adapter.ItemAdapter
 import com.example.sosalud.model.Persons
 import com.example.sosalud.view.HomecareActivity
+import com.example.sosalud.view.MedServicesActivity
 
 class HomecareAdapter(
     private val context: HomecareActivity,
