@@ -16,6 +16,10 @@ class ItemAdapter(
     private val dataset: List<Services>
 ): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
+    interface imageViewListener {
+        fun onImageViewClicked(medServices: Services, position: Int)
+    }
+
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.medserviceName)
         val imageView: ImageView = view.findViewById(R.id.item_image)
@@ -34,4 +38,6 @@ class ItemAdapter(
     }
 
     override fun getItemCount() = dataset.size
+
+
 }

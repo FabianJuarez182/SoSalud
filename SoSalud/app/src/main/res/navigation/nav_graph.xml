@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/summary_fragment">
+    app:startDestination="@id/InitialFragment">
 
+    <!--Initial -->
     <fragment
         android:id="@+id/InitialFragment"
         android:name="com.example.sosalud.view.InitialFragment"
@@ -17,15 +18,25 @@
             android:id="@+id/action_InitialFragment_to_activity_register"
             app:destination="@id/activity_register" />
     </fragment>
+
+    <!--Login -->
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.example.sosalud.view.LoginActivity"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_login">
         <action
+            android:id="@+id/action_activity_register_to_InitialFragment2"
+            app:destination="@id/InitialFragment" />
+        <action
             android:id="@+id/action_login_fragment_to_fragment_medservices"
             app:destination="@id/fragment_medservices" />
+        <action
+            android:id="@+id/action_login_fragment_to_fragment_homecare"
+            app:destination="@id/fragment_homecare" />
     </fragment>
+
+    <!--Register -->
     <fragment
         android:id="@+id/activity_register"
         android:name="com.example.sosalud.view.RegisterFragment"
@@ -34,13 +45,20 @@
         <action
             android:id="@+id/action_activity_register_to_InitialFragment2"
             app:destination="@id/InitialFragment" />
+        <action
+            android:id="@+id/action_activity_register_to_fragment_medservices"
+            app:destination="@id/fragment_medservices" />
     </fragment>
 
+    <!--Med Services -->
     <fragment
         android:id="@+id/fragment_medservices"
         android:name="com.example.sosalud.view.MedServicesActivity"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_medservices">
+        <action
+            android:id="@+id/action_fragment_medservices_to_fragment_homecare"
+            app:destination="@id/fragment_homecare" />
     </fragment>
     <fragment
         android:id="@+id/menu_fragment"
@@ -55,4 +73,10 @@
         tools:layout="@layout/summary_fragment">
     </fragment>
 
+    <fragment
+        android:id="@+id/fragment_homecare"
+        android:name="com.example.sosalud.view.HomecareActivity"
+        android:label="DetailHomecare"
+        tools:layout="@layout/fragment_homecare">
+    </fragment>
 </navigation>
