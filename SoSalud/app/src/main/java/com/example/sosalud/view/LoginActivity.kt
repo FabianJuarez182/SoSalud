@@ -62,10 +62,10 @@ class LoginActivity : Fragment() {
                                 var esPersonal = it.value.toString().toBoolean()
                                 if (esPersonal) {
                                     view.findNavController()
-                                        .navigate(R.id.action_login_fragment_to_fragment_homecare)
+                                        .navigate(R.id.action_login_fragment_to_fragment_medservices)
                                 } else {
                                     view.findNavController()
-                                        .navigate(R.id.action_login_fragment_to_fragment_medservices)
+                                        .navigate(R.id.action_login_fragment_to_menu_fragment)
                                 }
                             }
                     }

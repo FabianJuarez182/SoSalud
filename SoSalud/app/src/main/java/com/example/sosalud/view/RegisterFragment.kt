@@ -77,7 +77,13 @@ class RegisterFragment: Fragment() {
                       if(binding.checkBox.isChecked)
                           personalSalud = true
                       writeNewUser(username,email,personalSalud)
-                      view.findNavController().navigate(R.id.action_activity_register_to_fragment_medservices)
+                      if (personalSalud) {
+                          view.findNavController()
+                              .navigate(R.id.action_activity_register_to_fragment_medservices)
+                      } else {
+                          view.findNavController()
+                              .navigate(R.id.action_activity_register_to_menu_fragment)
+                      }
                       val user = Firebase.auth.currentUser
                       val profileUpdates = userProfileChangeRequest {
                           displayName = username
