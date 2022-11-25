@@ -7,44 +7,54 @@
     tools:ignore="MissingDefaultResource">
 
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/atention"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView6"
-        android:layout_marginTop="156dp"
-        android:text="Atención Domicialiar"
+        android:layout_marginTop="52dp"
+        android:text="Atención Domiciliar"
         android:textAlignment="center"
         android:textColor="@color/teal_200"
         android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recyclerhomecare"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:text="Pacientes con solicitud:"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/atention"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atention" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHomeCare"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="300dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="413dp"
+        android:layout_height="574dp"
+        android:layout_marginTop="24dp"
         android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerhomecare"
         tools:listitem="@layout/item_homecare_view" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:backgroundTint="#047483"
+        android:text=">"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/atention"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

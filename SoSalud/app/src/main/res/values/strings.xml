@@ -20,7 +20,22 @@
     <string name="Service10">Rayos X                         Q500.00</string>
 
     <!--Persons information -->
-    <string name="Person1">Fernanda</string>
-    <string name="Hour1">10:30 a.m.</string>
-    <string name="Addres1">19 calle 20-31 Zona 10 de Mixco</string>
+    <string name="Person1">Fernanda Lopez</string>
+    <string name="Hour1">10:30 am</string>
+    <string name="Addres1">19 calle 20-31 zona 10, Mixco</string>
+    <string name="Person2">Marcos Sandoval</string>
+    <string name="Hour2">7:00 pm</string>
+    <string name="Addres2">23 calle 23-31 zona 16, ciudad</string>
+    <string name="Person3">Jose Kiesling</string>
+    <string name="Hour3">9:32 pm</string>
+    <string name="Addres3">18 Av 19-04 zona 16 Col. Montesano condominio Home 16 Casa 32</string>
+    <string name="Person4">Javier Montoya</string>
+    <string name="Hour4">12:00 pm</string>
+    <string name="Addres4">24 avenida 22-90 zona 18, ciudad</string>
+    <string name="Person5">Clarissa Vasquez</string>
+    <string name="Hour5">2:00 pm</string>
+    <string name="Addres5">16 avenida 24-33 zona 4, ciudad</string>
+    <string name="Person6">Sofia Gonzalez</string>
+    <string name="Hour6">5:30 am</string>
+    <string name="Addres6">11 calle 24-36 zona 10, ciudad</string>
 </resources>

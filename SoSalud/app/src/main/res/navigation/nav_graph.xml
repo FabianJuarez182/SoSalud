@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/InitialFragment">
+    app:startDestination="@id/fragment_medservices">
 
     <!--Initial -->
     <fragment
@@ -63,11 +63,16 @@
             android:id="@+id/action_fragment_medservices_to_fragment_homecare"
             app:destination="@id/fragment_homecare" />
     </fragment>
+
+    <!--Menu fragment -->
     <fragment
         android:id="@+id/menu_fragment"
         android:name="com.example.sosalud.view.MenuAct"
         android:label="@string/app_name"
-        tools:layout="@layout/menu_fragment"/>
+        tools:layout="@layout/menu_fragment">
+    </fragment>
+
+    <!--Summary fragment -->
     <fragment
         android:id="@+id/summary_fragment"
         android:name="com.example.sosalud.view.SummaryAct"
@@ -75,10 +80,14 @@
         tools:layout="@layout/summary_fragment">
     </fragment>
 
+    <!--Homecare -->
     <fragment
         android:id="@+id/fragment_homecare"
         android:name="com.example.sosalud.view.HomecareActivity"
         android:label="DetailHomecare"
         tools:layout="@layout/fragment_homecare">
+        <action
+            android:id="@+id/action_fragment_homecare_to_fragment_medservices"
+            app:destination="@id/fragment_medservices" />
     </fragment>
 </navigation>
