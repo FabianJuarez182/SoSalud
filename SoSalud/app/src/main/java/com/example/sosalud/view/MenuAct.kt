@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sosalud.R
@@ -37,6 +38,8 @@ class MenuAct: Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(view.context)
         recyclerView.adapter = ItemMenuAdapter(this, MedServices)
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

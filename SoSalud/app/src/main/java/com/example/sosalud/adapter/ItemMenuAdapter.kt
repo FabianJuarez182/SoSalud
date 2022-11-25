@@ -16,8 +16,8 @@ class ItemMenuAdapter(
 ): RecyclerView.Adapter<ItemMenuAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.medserviceName)
-        val imageView: ImageView = view.findViewById(R.id.item_image)
+        val textView: TextView = view.findViewById(R.id.medserviceName2)
+        val imageView: ImageView = view.findViewById(R.id.item_image2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

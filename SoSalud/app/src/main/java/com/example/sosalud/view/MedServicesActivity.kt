@@ -44,6 +44,9 @@ class MedServicesActivity: Fragment(R.layout.fragment_medservices), ItemAdapter.
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewMed)
         recyclerView.layoutManager = LinearLayoutManager(view.context)
         recyclerView.adapter = ItemAdapter(this, MedServices)
+        binding.button7.setOnClickListener {
+            view.findNavController().navigate(R.id.action_fragment_medservices_to_fragment_homecare)
+        }
     }
 
     override fun onDestroyView() {

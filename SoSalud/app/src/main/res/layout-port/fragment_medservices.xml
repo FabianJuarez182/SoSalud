@@ -34,5 +34,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:listitem="@layout/item_medservices_view" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:backgroundTint="#047483"
+        android:text=">"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@
         android:layout_height="225dp">
 
         <ImageView
-            android:id="@+id/item_image"
+            android:id="@+id/item_image2"
             android:layout_width="376dp"
             android:layout_height="130dp"
             android:clickable="true"
@@ -24,7 +24,7 @@
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/medserviceName"
+            android:id="@+id/medserviceName2"
             android:layout_width="262dp"
             android:layout_height="52dp"
             android:padding="8dp"
@@ -46,7 +46,7 @@
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintHorizontal_bias="0.498"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="@+id/item_image"
+            card_view:layout_constraintTop_toTopOf="@+id/item_image2"
             card_view:layout_constraintVertical_bias="0.994" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
